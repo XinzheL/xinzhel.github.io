@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title:  "AI series: Loss Function"
 date:   2020-04-24 22:21:49 +1000
 categories: ML
@@ -24,9 +24,11 @@ For example, for passengers in Titanic, they are either survived or not survived
         + Hypothesis Function 2: Logistic Regression. 
         
         Consider the outcome of linear function as **log of odd**/[logit](https://en.wikipedia.org/wiki/Logit) of categorical outcomes $\ln \frac{p}{1-p}$ with assumption of the log odds of p is linearly related to the independent variable X. So, it combines **Linear Function**(right) and **Logit function/log-odd**(left) 
-        $$\ln \frac{p}{1-p} = \theta^{T} X $$  
+        
+        [\ \ln \frac{p}{1-p} = \theta^{T} X \] 
+        
         Inversed the logit function, it become **logistic/sigmoid function** for the probability which is considered as hypothesis
-        $$ h(x)=p=\frac{1}{1+e^{-\theta^{T} X}}$$
+        $$  h(x)=p=\frac{1}{1+e^{-\theta^{T} X}} $$
          Decision boundary can be described as: Predict 1, if θᵀx ≥ 0 → h(x) ≥ 0.5; Predict 0, if θᵀx < 0 → h(x) < 0.5.
     
 ## Lastly, for getting optimized parameters θ of the model, we need define the loss function to do backward pass.
@@ -45,7 +47,7 @@ For example, for passengers in Titanic, they are either survived or not survived
 
 ## How to define Loss Function?
 
-* In statistics, we can model its probability ditribution as **Bernoulli distribution**. The PDF is as followed:  It can be intuitively understood if y=1, it gives probability of Survived, i.e. p; if y=0, it gives probability of not Survived, i.e. (1-p).
+* In statistics, we can model its probability distribution as **Bernoulli distribution**. The PDF is as followed:  It can be intuitively understood if y=1, it gives probability of Survived, I.E. p; if y=0, it gives probability of not Survived, I.E. (1-p).
 
     $$f(y ; p)=p^{y}(1-p)^{1-y} \quad \text { for } y \in\{0,1\}$$
     
