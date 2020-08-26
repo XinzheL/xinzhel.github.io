@@ -33,11 +33,14 @@ github_username:  XinzheL
 theme: minima
 plugins:
   - jekyll-feed
-
+  - jekyll-seo-tag
+  
+# set the markdown parser in the _config.yml file
 markdown: kramdown
 kramdown:
    math_engine: mathjax
-   
+
+
 defaults:
   -
     scope:
