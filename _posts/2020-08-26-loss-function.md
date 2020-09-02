@@ -1,10 +1,17 @@
 ---
-layout: posts
-title:  "AI series: Loss Function"
+layout: post
+title:  "Loss Function: Why |y_true-y_predict| is not enough? "
 date:   2020-04-24 22:21:49 +1000
 categories: ML
 permalink: /:title.html
 ---
+Loss functions guide the direction of the training process via derivatives w.r.t parameters $W$ (normally I ignore the bias term $b$ since $W$ do the job of transforming input or we can add an additional input of 1 and $w_{n+1}$ could be integrated with $W$).  Intuitively, loss function will tell us how  wrong the current model predicts in contrast to the true values of samples.  However,  if this is the case, we just need to find parameter $W$  satisfying .$\sum_{i=1}^{n}\left(Y_{i}-\hat{Y}_{i}\right)^{2} = 0$. Normally, we average the square error: $ \mathrm{MSE}=\frac{1}{n} \sum_{i=1}^{n}\left(Y_{i}-\hat{Y}_{i}\right)^{2}$.
+
+There is a trick here: sample data won' t span the entire space so that a set of parameters could satisfy the sample points, e.g. classifying all sample points correctly. By the way, this post would focus on classification instead of regression.    Another thing is the bias of sample
+
+
+
+
 
 # Binary Classification
 
